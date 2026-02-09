@@ -24,17 +24,47 @@
         .message-list { margin-top: 20px; }
         .message-item { background: #f1f5f9; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid var(--primary); }
         .timestamp { display: block; font-size: 0.75rem; color: #94a3b8; margin-top: 5px; }
+
+         .resume-section { border-top: 1px solid #e2e8f0; padding-top: 15px; margin-top: 15px; }
+           .resume-section h3 { color: var(--primary); margin-bottom: 10px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+           .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+           .skill-badge { background: #dbeafe; color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+           ul { padding-left: 20px; color: #475569; }  
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="resume-card">
-        <h1>Ace_ng</h1>
-        <p class="tagline">Python Developer & Tech Enthusiast</p>
-        <p>Welcome to my mobile-hosted resume! I specialize in building light-weight web applications directly from my Android environment.</p>
+        <h1>Sobowale Oluwstobi</h1>
+        <p class="tagline">Full-Stack Python Developer</p>
         
-        <a href="/download-cv" class="btn">📄 Download My CV</a>
+        <div class="resume-section">
+            <h3>Summary</h3>
+            <p>Passionate developer specialized in building and deploying web applications using mobile environments. Expert in Flask, Git, and CI/CD workflows.</p>
+        </div>
+    
+        <div class="resume-section">
+            <h3>Experience</h3>
+            <p><strong>Freelance Developer</strong> | 2025 - Present</p>
+            <ul>
+                <li>Developed and deployed a live e-resume platform using Flask.</li>
+                <li>Optimized mobile deployment workflows via Termux and GitHub Actions.</li>
+            </ul>
+        </div>
+    
+        <div class="resume-section">
+            <h3>Skills</h3>
+            <div class="skills-grid">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Flask</span>
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">HTML/CSS</span>
+            </div>
+        </div>
+    
+        <a href="/download-cv" class="btn">📄 Download Full PDF</a>
+        <a href="mailto:your-email@example.com" class="btn" style="background: #64748b;">✉️ Contact Me</a>
     </div>
 
     <div class="guestbook">
