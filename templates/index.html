@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace_ng | Digital Resume</title>
+    <style>
+        :root { --primary: #2563eb; --dark: #1e293b; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--light); color: var(--dark); margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        
+        /* Resume Header */
+        .resume-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        h1 { margin: 0; color: var(--primary); }
+        .tagline { color: #64748b; margin-bottom: 20px; }
+        
+        /* Buttons */
+        .btn { display: inline-block; padding: 10px 20px; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        
+        /* Guestbook Section */
+        .guestbook { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        input { width: 70%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none; }
+        .message-list { margin-top: 20px; }
+        .message-item { background: #f1f5f9; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid var(--primary); }
+        .timestamp { display: block; font-size: 0.75rem; color: #94a3b8; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="resume-card">
+        <h1>Ace_ng</h1>
+        <p class="tagline">Python Developer & Tech Enthusiast</p>
+        <p>Welcome to my mobile-hosted resume! I specialize in building light-weight web applications directly from my Android environment.</p>
+        
+        <a href="/download-cv" class="btn">📄 Download My CV</a>
+    </div>
+
+    <div class="guestbook">
+        <h3>Leave a Note</h3>
+        <form method="POST">
+            <input type="text" name="content" placeholder="Say hello..." required>
+            <button type="submit" class="btn">Post</button>
+        </form>
+
+        <div class="message-list">
+            {% for m in messages %}
+                <div class="message-item">
+                    <strong>{{ m.text }}</strong>
+                    <span class="timestamp">🕒 {{ m.time }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
